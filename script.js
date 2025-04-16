@@ -10,7 +10,6 @@ fetch(uri)
   })
   .catch(err => console.error('Erro ao carregar os produtos:', err));
 
-// Função para exibir os cards na página
 function mostrarCards() {
   const main = document.querySelector('main');
   main.innerHTML = ''; // Limpa o conteúdo antes de adicionar os cards
@@ -26,8 +25,6 @@ function mostrarCards() {
     `;
   });
 }
-
-// Função para exibir os detalhes do produto no modal
 function mostrarDetalhes(id) {
   const produto = produtos.find(p => p.id === id);
   if (!produto) {
@@ -66,7 +63,6 @@ window.onclick = function (event) {
   }
 };
 
-// Função para adicionar um produto ao carrinho
 function adicionarAoCarrinho(id) {
   const produto = produtos.find(p => p.id === id);
   if (!produto) {
@@ -94,12 +90,10 @@ function adicionarAoCarrinho(id) {
   fecharModal();
 }
 
-// Função para fechar o modal
 function fecharModal() {
   document.getElementById('modal').style.display = 'none';
 }
 
-// Função para atualizar o carrinho
 if (document.getElementById('carrinho')) {
   const container = document.getElementById('carrinho');
   const totalDiv = document.getElementById('total');
