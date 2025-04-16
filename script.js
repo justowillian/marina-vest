@@ -1,7 +1,6 @@
 const uri = './assets/dados.json';
 let produtos = [];
 
-// Função para buscar os dados do JSON
 fetch(uri)
   .then(resp => resp.json())
   .then(resp => {
