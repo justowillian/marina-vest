@@ -11,7 +11,7 @@ fetch(uri)
 
 function mostrarCards() {
   const main = document.querySelector('main');
-  main.innerHTML = ''; // Limpa o conteúdo antes de adicionar os cards
+  main.innerHTML = '';
 
   produtos.forEach(p => {
     main.innerHTML += `
@@ -54,7 +54,6 @@ function mostrarDetalhes(id) {
   };
 }
 
-// Fecha o modal ao clicar fora dele
 window.onclick = function (event) {
   const modal = document.getElementById('modal');
   if (event.target === modal) {
